@@ -1,0 +1,89 @@
+WinSetupFromUSB Programa para instalar varios SO en un USB
+
+Hirens Boot, programa multiproposito, ya lo conoces mas o menos.
+
+//////////////////////////////////////////////////
+
+24/04 Primer Examen, todo multiple Choise, quizas hay que escribir algun comando.
+
+
+////////////////////////////////////////////////
+
+www.get-metadata.com  Pagina para extraer metadata de archivos
+
+///////////////////////////////////////////////
+
+De nuevo vemos algunos comandos:
+
+"cd -" Vuelve atraz en la ruta
+"PATH" No entendi, averiguar
+"cp" Para copiar (ej "cp /bin/ls new-ls")
+"cp -r" Me copia todo el directorio (ej: "cp /etc") Tambien podemos usar comodines como "*". Tambien podemos agregar un "-i" para que pregunte antes de sobreescribir.
+
+Formato general:  cp (atributos)/ruta origen /ruta destino
+
+"mv" Comando que mueve o renombra archivos.
+"rm" Comando que borra archivos.Para directorio indicar "-r" y podemos anexar un "-i" para que pregunte antes de borrar. Tambien podemos indicar "-f" para borrado forzado.
+
+
+Nota: Ruta absoluta cuando mindico todo el path, relativo cuando arranco con ".." o "./" etc...
+
+
+//////////////////////////////////////////////
+
+Estructura de directorios en Linux:
+
+FHS (Estandard de File System)
+
+/boot ->Ahi estan todos los qçarchivos de arranque
+
+/dev ->Ahi estan todos los dispositivos, discos y demas
+
+Estuvimos viendo con mas de una terminal la ejecucion de comandos y el encio de comandos entre ellas:
+
+alumno@LAB05PC03:~$ tty
+/dev/pts/0
+alumno@LAB05PC03:~$ tty
+/dev/pts/0
+alumno@LAB05PC03:~$ echo "hola" > /dev/pts/1
+alumno@LAB05PC03:~$ ls /proc > dev/pts/1
+bash: dev/pts/1: No existe el fichero o el directorio
+alumno@LAB05PC03:~$ ls /proc > /dev/pts/1
+alumno@LAB05PC03:~$ ls /proc > /dev/pts/1
+
+/etc->Aqui guarda todos los archivos de configuracion de programas y sistema, esta carpeta deberia backupearse en caso de formateo.
+
+/home->Ahi estan todos los archivos de usuarios
+
+/lib->Libreria de 32 bits (Equivalente a "Archivos del Programa *86 en Windows)
+
+/mnt->Sistemas de archivos montados temporalmente
+
+/media->Punto de montaje para discos, cds, etc...
+
+/opt->Para aplicaciones estaticas, es una ruta independiente para programas
+
+/proc->Sistema de archivos virtual que documenta sucesos
+
+/root->Directorio de inicio del superusuario
+
+/sbin->Comandos/programas binarios para administracion del siistema
+
+/tmp-> Archivos temporales
+
+Faltaron algunos, chusmear la diapositiva.
+
+///////////////////////////////////////
+
+
+Creo un directorio "cd" y monto la unidad 0 en el:
+
+alumno@LAB05PC03:~$ mkdir cd
+alumno@LAB05PC03:~$ mount /dev/sbd0 /cd
+
+
+
+
+
+
+
