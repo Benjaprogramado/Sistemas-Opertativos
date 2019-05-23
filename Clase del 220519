@@ -78,6 +78,22 @@ usermod -G sudo,lp -a Usuarioprueba2 (comando que modifica un usuario, aqui lo a
 
 Lo generado con "useradd" se puede modificar con "usermod".
 
+"userdel Usuarioprueba2" (Elimino el usuario, puedo aplicar -r para borrar todo lo referido a este, pero cuidado, chequear antes que este ubicado en /home para evitar borrar archivos no deseados).
+
+
+Creacion de grupos:
+
+groupadd rrhh (creo grupo rrhh)
+
+grep rrhh /etc/group (chequeo grupo generado)
+
+groupdell (borro el grupo creado)
+
+
+
+
+Hacer los ejercicios de la guia sobre esto...
+
 
 
 
