@@ -1,1 +1,14 @@
 
+Cuando llege estaban viendo la pag. de "alpinelinux", chusmear.
+
+Una contraseña se compone por 3 partes:
+-Hash (Tipo de algoritmo utilizado)
+-Semilla
+-Contraseña encriptada en si
+Esto es lo que vemos en el choclo encriptado y cada una de estas partes de divide por el simbolo "$".
+--> more /etc/passwd ubicacion de los usuarios en el sistema
+--> more /etc/shadow ubicacion de las password en el sistema
+--> more /etc/group ubicacion de los grupos en el sistema
+
+Se volvio a ver el ejercicio de crear usuarios,grupos y carpetas con diferentes permisos. 
+Tengo que hacer este ejercicio en un sistema ejecutado como root.
