@@ -12,3 +12,18 @@ Esto es lo que vemos en el choclo encriptado y cada una de estas partes de divid
 
 Se volvio a ver el ejercicio de crear usuarios,grupos y carpetas con diferentes permisos. 
 Tengo que hacer este ejercicio en un sistema ejecutado como root.
+
+****************************************************************************************************
+
+PROGRAMACION EN BASH
+
+Ejemplo basico:
+
+#nano prog01.sh
+ #!/bin/bash
+ echo "hola mundo"
+#chmod +x prog01.sh
+
+Luego lo ejecute asi: ./ prog01.sh
+
+
