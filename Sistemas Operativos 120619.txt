@@ -1,0 +1,51 @@
+
+Estaban nombrando "Black Phyton"
+
+************************************
+
+seguimos viendo programacion bash, a partir del ejemplo 3.
+
+Cabe destacar que al utilizar un "if", lo finalizamos siempre con un "fi", no hay llaves, y los corchetes tienen que estar separados de la condicion.
+
+Recordar que para ejecutar el programa usamos "./" para referirnos a su ubicacion, y antes le hacemos un "chmod +x" para poder ejecutarlo.
+
+PROG03
+
+#!/bin/bash
+# comentario
+
+if [ -z /etc/passwd ]; then
+echo "Si esta vacio"
+else
+echo "NO esta vacio"
+fi
+
+PROG04
+
+#!/bin/bash
+# comentario
+
+echo -n "Ingrese un nombre:"
+read NOMBRE
+
+if [ "${NOMBRE}" == "PABLO" ]; then
+echo "Su nombre es PABLO"
+else
+echo "Su nombre es: "$NOMBRE
+fi
+
+PROG05
+
+#! /bin/bash
+
+for I in 1 2 3 4 5 ; do
+echo ${I}
+done
+
+PROG06
+
+#! /bin/bash
+
+for ARCHIVOS in /etc/*; do
+echo ${ARCHIVOS}
+done
