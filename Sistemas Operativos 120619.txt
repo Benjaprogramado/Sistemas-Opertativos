@@ -11,7 +11,7 @@ Recordar que para ejecutar el programa usamos "./" para referirnos a su ubicacio
 
 PROG03
 
-#!/bin/bash
+#!/bin/bash     
 # comentario
 
 if [ -z /etc/passwd ]; then
@@ -49,3 +49,9 @@ PROG06
 for ARCHIVOS in /etc/*; do
 echo ${ARCHIVOS}
 done
+
+
+El ultimo ejercicio de bash era mas jodido, habia que crear usuarios tomandolos del 
+archivo txt, el script seria algo asi:
+
+ver foto celu...
