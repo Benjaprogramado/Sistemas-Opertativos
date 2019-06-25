@@ -1,0 +1,105 @@
+Clase 220519
+************************************************************************
+En linux mas alla de las extensiones, el tipo de archivo lo definimos a partir de los metadatos.
+
+Visitamos **muylinux.com**, windows esta largando una version del kernel open ource que permitiria ejecutar ciertas herramientas de linux.
+
+En la clase de hoy vimos permisos y usuarios. En la diapositiva esta muy claro.
+
+touch archivo01.txt (Creo archivo, o le cambio la fecha si ya existe)
+
+chmod 740 archivo01.txt (Cambio los permisos del archivo)
+
+Valores por defecto:
+
+"umask" Resta 22 a los valores por defecto:
+
+ARCHIVO
+0666(POR DEFECTO)
+022 (UMASK)
+0644 (RESULTADO)
+
+DIRECTORIO
+
+0777(POR DEFECTO)
+0022(UMASK)
+0755(RESULTADO)
+
+"chmod +X" Le da permisos de ejecucion a todos	
+
+"chown" Nos permite cambiar dueño y tambien el grupo, pero primeramente es para cambiar el dueño.
+"chgrp" Nos permite cambiar el grupo del objeto, pero siempre mantiene el dueño.
+
+**Hicimos el jercicio de la guia**
+
+"ls -l" Como tipicamente listamos archivos y sus permisos
+"ls -ld" Lista permisos del directorio donde estoy parado
+
+**hashcat.net** Programa para romper claves
+**onlinehashCrack** Otra para blanquear claves
+
+Despues seguimos vindo la unicaciòn de los pass, comando "grep", y hablando de como rompaer pass.
+Segun el tipo de versiòn de kernel en linux es como sabremos el tipo de encriptaciòn que usa.
+Hay programas para hacer volcados de la memoria ram para despues trabajar sobre esa info (peritaje).
+**************************************************************************
+Despues pasamos a creacion de usuarios, chusmianmos el directorio "/etc/skel" Ahi se guarda la configuraciòn definida para los usuarios que se crean.
+Solo los administradores crean usuarios.
+"useradd" crea un usuario y le podemos asignar un archivo con los parametros a asignar.
+
+Ejemplo creacion de usuario:
+
+useradd -m -c  "Usuario de Prueba" -s /bin/rbash Usuarioprueba (creacion)
+ 
+grep Usuarioprueba /etc/passwd (revisamos el usuario creado)
+
+grep Usuarioprueba /etc/goup (revisamos a que grupo pertenece, en este caso pertenecera solo a si mismo)
+
+grep Usuarioprueba /etc/shadow (chusmeamos la clave, sino la creamos no muestra nada)
+
+passwd Usuarioprueba (para asignarle una clave al usuario)
+
+login (para cambiar de usuario y probar el usuario creado)
+
+ctrl+d (cerrar sesion)
+
+**Al crearlo indicando "rbash" le brindamos al nuevo usuario una consola bastante limitada, "enjaulada", es lo mismo que indicar "bash -r"**
+
+Ejemplo creacion de otro usuario:
+
+useradd -m -c "Otro usuario de prueba" -g nongroup -s /bin/bash Usuarioprueba2 (creacion)
+
+grep Usuarioprueba2 /etc/passwd (revisamos el usuario creado)
+
+passwd Usuarioprueba2 (para asignarle una clave al usuario)
+
+login (para cambiar de usuario y probar el usuario creado)
+
+usermod -G sudo,lp -a Usuarioprueba2 (comando que modifica un usuario, aqui lo anexe a los grupos sugo y li con -G, y mantuve su grupo original con -a) Tengo que salir y volver a loguearme para que los cambios surtan efecto.
+
+Lo generado con "useradd" se puede modificar con "usermod".
+
+"userdel Usuarioprueba2" (Elimino el usuario, puedo aplicar -r para borrar todo lo referido a este, pero cuidado, chequear antes que este ubicado en /home para evitar borrar archivos no deseados).
+
+
+Creacion de grupos:
+
+groupadd rrhh (creo grupo rrhh)
+
+grep rrhh /etc/group (chequeo grupo generado)
+
+groupdell (borro el grupo creado)
+
+
+
+
+Hacer los ejercicios de la guia sobre esto...
+
+
+
+
+ 
+
+
+
+
+
