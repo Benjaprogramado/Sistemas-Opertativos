@@ -720,7 +720,7 @@ Be careful before using the write command.
 El dispositivo no contiene una tabla de particiones reconocible.
 Created a new DOS disklabel with disk identifier 0x472b7f98.
 
-Orden (m para obtener ayuda): n
+Orden (m para obtener ayuda): nlvcrea	
 Partition type
    p   primary (0 primary, 0 extended, 4 free)
    e   extended (container for logical partitions)

@@ -1,4 +1,4 @@
-Clase 220519
+shaClase 220519
 ************************************************************************
 En linux mas alla de las extensiones, el tipo de archivo lo definimos a partir de los metadatos.
 
